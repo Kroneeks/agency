@@ -3,7 +3,11 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["standard-with-typescript", "plugin:react/recommended"],
+  "extends": [
+    "standard-with-typescript",
+    "plugin:react/recommended",
+    "prettier"
+  ],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
@@ -49,6 +53,7 @@
       }
     ],
     "@typescript-eslint/no-invalid-void-type": "off",
+    "@typescript-eslint/prefer-nullish-coalescing": "warn",
     "n/no-callback-literal": "off"
   },
   "ignorePatterns": ["webpack.config.ts", "**/config/**/*"],
@@ -56,6 +61,7 @@
     {
       "files": ["**/src/**/*.{test, stories}.{ts,tsx}"],
       "rules": {
+        "i18next/no-literal-string": "off",
         "@typescript-eslint/unbound-method": "off"
       },
       "extends": [
