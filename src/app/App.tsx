@@ -1,9 +1,16 @@
+import { LangSwitcher } from '@/features/LangSwitcher';
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const App = memo(() => {
-    const ap1 = '';
+    const { t } = useTranslation();
 
-    return <div id="app">App</div>;
+    return (
+        <div id="app">
+            {t('Приложение')}
+            <LangSwitcher />
+        </div>
+    );
 });
 
 App.displayName = 'App';
