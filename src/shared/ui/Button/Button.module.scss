@@ -1,0 +1,85 @@
+.Button {
+    cursor: pointer;
+    color: var(--text-redesigned);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+
+    &:hover {
+        color: var(--accent-redesigned);
+    }
+}
+
+.clear {
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.filled {
+    background: var(--bg-inverted-color);
+    border: none;
+    outline: none;
+    border-radius: 34px;
+}
+
+.outline {
+    background: none;
+    border: 2px solid var(--icon-redesigned);
+    border-radius: 34px;
+
+    &:hover {
+        border-color: var(--accent-redesigned);
+    }
+
+    &.normal {
+        border-color: var(--icon-redesigned);
+    }
+
+    &.error {
+        border-color: var(--cancel-redesigned);
+
+        &:hover {
+            color: var(--cancel-redesigned);
+        }
+    }
+
+    &.success {
+        border-color: var(--save-redesigned);
+
+        &:hover {
+            color: var(--save-redesigned);
+        }
+    }
+}
+
+.s {
+    padding: 10px;
+    font: var(--font-sm);
+}
+
+.m {
+    font: var(--font-m);
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.noneRadius {
+    border-radius: 0;
+}
+
+.smRadius {
+    border-radius: 10px;
+}
+
+.mRadius {
+    border-radius: 100px;
+}
