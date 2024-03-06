@@ -6,12 +6,13 @@ const MainPage = () => {
         <>
             <div>Главная страница</div>
             <Button
-                size="s"
-                color="light-gray"
+                size="m"
+                gap="mGap"
+                color="normal"
+                radius="smRadius"
                 variant="filled"
-                radius="mRadius"
             >
-                обсудить
+                Войти
             </Button>
             <AppLink to={'/search'}>Поиск</AppLink>
         </>

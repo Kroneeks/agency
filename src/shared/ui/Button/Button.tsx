@@ -10,6 +10,7 @@ import {
 export type ButtonVariant = 'outline' | 'filled';
 export type ButtonColor = 'normal' | 'light-gray' | 'gray';
 export type ButtonRadius = 'noneRadius' | 'smRadius' | 'mRadius';
+export type ButtonPadding = 'smGap' | 'mGap';
 
 export type ButtonSize = 's' | 'm';
 
@@ -22,6 +23,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     radius?: ButtonRadius;
     disabled?: boolean;
     fullWidth?: boolean;
+    gap?: ButtonPadding;
 }
 
 const Button = forwardRef(
@@ -38,6 +40,7 @@ const Button = forwardRef(
             size = 'm',
             disabled = false,
             fullWidth = false,
+            gap = 'smGap',
             ...otherProps
         } = props;
 
@@ -56,6 +59,7 @@ const Button = forwardRef(
                     cls[color],
                     cls[size],
                     cls[radius],
+                    cls[gap],
                 ])}
                 ref={ref}
                 {...otherProps}

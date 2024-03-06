@@ -5,6 +5,7 @@
     align-items: center;
     gap: 5px;
     padding: 8px 12px;
+    transition: 0.2s ease all;
 
     &:hover {
         color: var(--accent-redesigned);
@@ -13,16 +14,47 @@
 
 .clear {
     padding: 0;
-    background: none;
     border: none;
     outline: none;
 }
 
 .filled {
-    background: var(--bg-inverted-color);
     border: none;
     outline: none;
     border-radius: 34px;
+    border: 1px solid transparent;
+
+    &.normal {
+        background: var(--base-07);
+        color: var(--base-02);
+
+        &:hover {
+            background: transparent;
+            color: var(--base-07);
+            border-color: var(--base-07);
+        }
+    }
+
+    &.light-gray {
+        background: var(--base-03);
+        color: var(--base-06);
+
+        &:hover {
+            background: var(--base-05);
+            color: var(--base-02);
+        }
+    }
+
+    &.gray {
+        background: var(--base-05);
+        color: var(--base-02);
+
+        &:hover {
+            background: transparent;
+            color: var(--base-07);
+            border-color: var(--base-07);
+        }
+    }
 }
 
 .outline {
@@ -82,4 +114,12 @@
 
 .mRadius {
     border-radius: 100px;
+}
+
+.smGap {
+    padding: 10px 12px;
+}
+
+.mGap {
+    padding: 14px 24px;
 }
