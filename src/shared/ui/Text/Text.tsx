@@ -16,6 +16,7 @@ interface TextProps {
     align?: TextAlign;
     size?: TextSize;
     bold?: boolean;
+    upper?: boolean;
 
     'data-testid'?: string;
 }
@@ -31,7 +32,7 @@ const mapSizeToClass: Record<TextSize, string> = {
 const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
     s: 'h3',
     m: 'h2',
-    l: 'h3',
+    l: 'h1',
 };
 
 const Text = memo((props: TextProps) => {
@@ -42,6 +43,7 @@ const Text = memo((props: TextProps) => {
         variant = 'primary',
         size = 'm',
         align = 'left',
+        upper = false,
         bold = false,
         'data-testid': dataTestId = 'Text',
     } = props;
@@ -60,7 +62,7 @@ const Text = memo((props: TextProps) => {
         <div
             className={classNames(
                 cls.Text,
-                { [cls.bold]: bold },
+                { [cls.bold]: bold, [cls.upper]: upper },
                 additionalClasses,
             )}
         >

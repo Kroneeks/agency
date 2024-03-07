@@ -46,7 +46,11 @@
     --font-title-m: var(--font-tsize-m) / var(--font-tline-m) var(--font-family-title);
     --font-tsize-l: 40px;
     --font-tline-l: 48px;
-    --font-title-l: var(--font-size-l) / var(--font-line-l) var(--font-family-title);
+    --font-title-l: var(--font-tsize-l) / var(--font-tline-l) var(--font-family-title);
+
+    --font-price: var(--font-size-m) / var(--font-line-m) var(--font-family-text);
+
+
 
     // Z - INDEXES
     --modal-z-index: 30;
